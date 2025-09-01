@@ -18,3 +18,6 @@ pcall(vim.keymap.del, "v", "<C-l>")
 vim.keymap.set({ "n", "v" }, "<C-l>", function()
   utils.recenter_top_bottom()
 end, { noremap = true, silent = true, desc = "Cycle line position (center/top/bottom)" })
+
+-- zz like za
+vim.keymap.set("n", "zz", "za", { desc = "Toggle fold" })
