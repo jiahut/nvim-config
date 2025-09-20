@@ -31,11 +31,14 @@ return {
 
     providers = {
       openai = {
-        api_key_name = "AICHAT_API_KEY",
-        endpoint = "http://127.0.0.1:8000/v1",
+        -- api_key_name = "AICHAT_API_KEY",
+        -- endpoint = "http://127.0.0.1:8000/v1",
+        api_key_name = "TRANSAI_API_KEY",
+        endpoint = "https://hk-intra-paas.transsion.com/tranai-proxy/v1",
         -- endpoint = "https://cfwus02.opapi.win/v1",
         -- model = "trans:claude-3-7-sonnet@20250219", -- your desired model (or use gpt-4o, etc.)
-        model = "trans:claude-sonnet-4@20250514", -- your desired model (or use gpt-4o, etc.)
+        -- model = "trans:claude-sonnet-4@20250514", -- your desired model (or use gpt-4o, etc.)
+        model = "kimi-k2-turbo-preview",
         extra_request_body = {
           timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
           temperature = 0.5,
@@ -86,7 +89,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "nvim-mini/mini.pick", -- for file_selector provider mini.pick
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
