@@ -15,6 +15,17 @@ return {
     },
   },
   opts = {
+
+    windows = {
+      sidebar_header = {
+        align = "center",
+        rounded = true,
+      },
+      -- 确保窗口配置正确
+      wrap = true,
+      width = 30,
+    },
+
     laststatus = 3,
     -- add any opts here
     -- for example
@@ -32,12 +43,12 @@ return {
     providers = {
       openai = {
         -- api_key_name = "AICHAT_API_KEY",
-        -- endpoint = "http://127.0.0.1:8000/v1",
         api_key_name = "TRANSAI_API_KEY",
-        endpoint = "https://hk-intra-paas.transsion.com/tranai-proxy/v1",
+        -- endpoint = "https://hk-intra-paas.transsion.com/tranai-proxy/v1",
         -- endpoint = "https://cfwus02.opapi.win/v1",
-        -- model = "trans:claude-3-7-sonnet@20250219", -- your desired model (or use gpt-4o, etc.)
-        -- model = "trans:claude-sonnet-4@20250514", -- your desired model (or use gpt-4o, etc.)
+        -- endpoint = "http://10.150.226.50:8081/v1",
+        endpoint = "https://o.zhangzhijia.online/tranai-proxy/v1",
+        -- model = "claude-sonnet-4-20250514",
         model = "kimi-k2-turbo-preview",
         extra_request_body = {
           timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
